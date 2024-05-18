@@ -26,3 +26,4 @@ dist-ssr
 resources/
 
 src/integration/
+src/integration
