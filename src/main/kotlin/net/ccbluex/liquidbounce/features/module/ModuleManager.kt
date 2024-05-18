@@ -215,6 +215,7 @@ object ModuleManager : Listenable, Iterable<Module> by modules {
             ModuleZoot,
             ModuleAutoQueue,
             ModuleSmartEat,
+            ModuleAutoResistance,
 
             // Render
             ModuleAnimations,
