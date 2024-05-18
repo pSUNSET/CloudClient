@@ -25,4 +25,4 @@ dist-ssr
 
 resources/
 
-src/integration/host.js
+src/integration
