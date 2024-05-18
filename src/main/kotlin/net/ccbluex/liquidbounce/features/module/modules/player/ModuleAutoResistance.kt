@@ -7,9 +7,9 @@ import net.ccbluex.liquidbounce.features.module.Module
 import net.minecraft.client.gui.screen.DeathScreen
 
 /**
- * AutoRespawn module
+ * AutoResistance module
  *
- * Automatically respawns the player after dying.
+ * Automatically give the player resistance effect.
  */
 object ModuleAutoResistance : Module("AutoResistance", Category.PLAYER) {
 
