@@ -9,4 +9,3 @@
 /run/
 /mcef/
 *.log
-/src-theme/src/integration/host.ts
