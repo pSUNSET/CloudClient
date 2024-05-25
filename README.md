@@ -7,4 +7,4 @@
     <img width="200" src="https://raw.githubusercontent.com/CCBlueX/LiquidCloud/master/LiquidBounce/liquidbounceLogo.svg">
 </p>
 
-A addon mod for Liquid Bounce.
+A addon mod for [Liquid Bounce](https://github.com/CCBlueX/LiquidBounce).
