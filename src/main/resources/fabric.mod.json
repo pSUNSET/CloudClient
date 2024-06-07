@@ -1,42 +1,60 @@
 {
   "schemaVersion": 1,
-  "id": "liquidbounce",
+  "name": "Meteor Client",
+  "id": "meteor-client",
   "version": "${version}",
-  "name": "LiquidBounce",
-  "description": "A free mixin-based injection hacked-client for Minecraft using the Fabric modding toolchain.",
+  "description": "Based utility mod.",
   "authors": [
-    "CCBlueX"
+    "MineGame159",
+    "squidoodly",
+    "seasnail"
   ],
   "contact": {
-    "homepage": "https://liquidbounce.net/",
-    "sources": "https://github.com/CCBlueX/LiquidBounce/",
-    "issues": "https://github.com/CCBlueX/LiquidBounce/issues",
-    "email": "support@liquidbounce.net"
+    "homepage": "https://meteorclient.com",
+    "issues": "https://github.com/MeteorDevelopment/meteor-client/issues",
+    "sources": "https://github.com/MeteorDevelopment/meteor-client",
+    "discord": "https://meteorclient.com/discord"
   },
-  "license": "GNU General Public License v3.0",
-  "icon": "assets/liquidbounce/icon_64x64.png",
+  "license": "GPL-3.0",
+  "icon": "assets/meteor-client/icon.png",
   "environment": "client",
   "entrypoints": {
-    "main": []
+    "client": [
+      "meteordevelopment.meteorclient.MeteorClient"
+    ]
   },
+  "mixins": [
+    "meteor-client.mixins.json",
+    "meteor-client-baritone.mixins.json",
+    "meteor-client-indigo.mixins.json",
+    "meteor-client-sodium.mixins.json",
+    "meteor-client-canvas.mixins.json",
+    "meteor-client-lithium.mixins.json",
+    "meteor-client-indium.mixins.json",
+    "meteor-client-viafabricplus.mixins.json"
+  ],
+  "accessWidener": "meteor-client.accesswidener",
   "custom": {
+    "meteor-client:devbuild": "${devbuild}",
+    "meteor-client:color": "145,61,226",
+    "meteor-client:commit": "${commit}",
     "modmenu": {
       "links": {
-        "liquidbounce.generic.guilded": "https://guilded.gg/CCBlueX",
-        "liquidbounce.generic.forum": "https://forums.ccbluex.net/"
+        "modmenu.discord": "https://meteorclient.com/discord"
       }
     }
   },
-  "mixins": [
-    "liquidbounce.mixins.json"
-  ],
   "depends": {
-    "minecraft": "1.20.6",
-    "fabricloader": ">=${loader_version}",
-    "fabric-language-kotlin": ">=${fabric_kotlin_version}"
+    "java": ">=21",
+    "minecraft": ["1.20.5", "${minecraft_version}"],
+    "fabricloader": ">=${loader_version}"
   },
-  "suggests": {
-    "fabric": ">=${fabric_version}"
-  },
-  "accessWidener": "liquidbounce.accesswidener"
+  "breaks": {
+    "optifabric": "*",
+    "feather": "*",
+    "origins": "*",
+    "wurst": "*",
+    "sodium": "<0.5.8",
+    "morechathistory": "*"
+  }
 }
